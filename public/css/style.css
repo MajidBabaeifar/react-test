@@ -37,11 +37,12 @@
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    border:none;
+    border: none;
     background-color: #353533;
 }
-.search--box:focus{
-   background-color: white; 
+
+.search--box:focus {
+    background-color: white;
 }
 
 .search--icon {
@@ -71,7 +72,8 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
-.division:hover{
+
+.division:hover {
     background-color: #424242;
 }
 
@@ -84,3 +86,8 @@ img {
     height: 100%;
     object-fit: cover;
 }
+
+.img-thumbnail {
+    width: 45px;
+}
+
