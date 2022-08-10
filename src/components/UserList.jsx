@@ -15,7 +15,7 @@ const UserList = () => {
 
     return (
         <div className="container my-5">
-            <table className="table table-striped">
+            <table className="cursor table table-striped">
                 <thead>
                     <tr>
                         <th>name</th>
