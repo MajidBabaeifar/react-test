@@ -19,13 +19,16 @@ const Navigation = () => {
                 <div className="collapse navbar-collapse" id='navmenu'>
                     <ul className="ms-auto navbar-nav">
                         <li className="navbar-item">
-                            <Link to="/" className='nav-link'>home</Link>
+                            <Link to="/" className='nav-link'>Home</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/userlist" className='nav-link'>list</Link>
+                            <Link to="/userlist" className='nav-link'>User List</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/projects" className='nav-link'>projects</Link>
+                            <Link to="/projects" className='nav-link'>Projects</Link>
+                        </li>
+                        <li className="navbar-item">
+                            <Link to="/gallery" className='nav-link'>Gallery</Link>
                         </li>
                     </ul>
                 </div>
