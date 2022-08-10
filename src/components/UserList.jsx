@@ -1,21 +1,31 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { UserService } from './../sevice/UserService';
+import loadingImage from '../assets/23.gif'
 
 const UserList = () => {
-
+    const [isLoading, setIsLoading] = useState(false)
     const [list, setList] = useState([])
 
     const getUser = async () => {
-        const temp = await UserService.getAllUsers()
-        setList(temp.data)
+        try {
+            setIsLoading(true)
+            const temp = await UserService.getAllUsers()
+            setIsLoading(false)
+            setList(temp.data)
+        } catch (e) {
+            console.log(e)
+        }
     }
-    useEffect(() => {
-        getUser()
-    }, [])
 
     return (
         <div className="container my-5">
-            <table className="cursor table table-striped">
+            <button className='btn btn-dark' onClick={getUser}>
+                click to call the Api
+            </button>
+            {
+                isLoading && <div className='mt-5'><img src={loadingImage} alt="" /></div>
+            }
+            {!isLoading && <table className="cursor mt-3 table table-striped">
                 <thead>
                     <tr>
                         <th>name</th>
@@ -38,7 +48,7 @@ const UserList = () => {
                         </tr>
                     ))}
                 </tbody>
-            </table>
+            </table>}
         </div>
     );
 }
