@@ -105,3 +105,9 @@ img {
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
 }
+.blue{
+    background: blue;
+}
+.red{
+    background: red;
+}
